@@ -1,0 +1,304 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://loadmanager/MenuUI.gd" type="Script" id=1]
+[ext_resource path="res://loadmanager/SettingsPanel.tscn" type="PackedScene" id=2]
+[ext_resource path="res://icon.png" type="Texture" id=3]
+[ext_resource path="D:/godotprojectsDELL/GODOT_3_2/godot_mobile_pwa_boilerplater/fonts/antonio/Antonio-Regular.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://assets/images/mudhead_pitch_deck_cover.png" type="Texture" id=5]
+[ext_resource path="res://music_box/fonts/ArchivoNarrow-Regular.otf" type="DynamicFontData" id=6]
+[ext_resource path="res://fonts/antonio/Antonio-Regular.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://loadmanager/MenuUI.tres" type="Theme" id=8]
+[ext_resource path="res://default_config.tscn" type="PackedScene" id=9]
+
+[sub_resource type="DynamicFont" id=1]
+size = 36
+use_filter = true
+font_data = ExtResource( 7 )
+
+[sub_resource type="Gradient" id=2]
+offsets = PoolRealArray( 0, 0.530744, 1 )
+colors = PoolColorArray( 0.781888, 0.302041, 1, 1, 0.366905, 0.609844, 1, 1, 0, 0.881988, 1, 1 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 14
+use_filter = true
+extra_spacing_char = 1
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 18
+use_filter = true
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 18
+use_filter = true
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 18
+use_filter = true
+font_data = ExtResource( 4 )
+
+[node name="MenuUI" type="Node"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 223.36, 75.0, 369.335, 515.678 ]
+}
+SettingsPanel = ExtResource( 2 )
+scene_1 = "res://scenes/about_the_game.tscn"
+scene_2 = "res://scenes/game_play.tscn"
+scene_3 = "res://scenes/development.tscn"
+scene_4 = "res://scenes/extras.tscn"
+game_title = "Mudhead: Mesa [Pitch Deck 1]"
+
+[node name="Center" type="CenterContainer" parent="."]
+anchor_left = 0.015
+anchor_top = 0.08
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -8.1
+margin_top = -1.8
+margin_bottom = -281.0
+rect_min_size = Vector2( 540, 0 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="main_nav_panel" type="ScrollContainer" parent="Center"]
+margin_top = 2.0
+margin_right = 540.0
+margin_bottom = 602.0
+rect_min_size = Vector2( 540, 600 )
+scroll_horizontal_enabled = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Center/main_nav_panel"]
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="one" type="Sprite" parent="Center/main_nav_panel/VBoxContainer"]
+self_modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 272, 72.6598 )
+texture = ExtResource( 3 )
+
+[node name="About_The_Game" type="TextureButton" parent="Center/main_nav_panel/VBoxContainer/one"]
+margin_left = -270.0
+margin_top = -72.0
+margin_right = 270.0
+margin_bottom = 74.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Center/main_nav_panel/VBoxContainer/one/About_The_Game"]
+margin_right = 540.0
+margin_bottom = 146.0
+custom_fonts/font = SubResource( 1 )
+text = "About The Game"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="Center/main_nav_panel/VBoxContainer/one/About_The_Game"]
+position = Vector2( 269.259, 74.7727 )
+emitting = false
+preprocess = 0.3
+explosiveness = 0.1
+emission_shape = 1
+emission_sphere_radius = 53.14
+gravity = Vector2( 0, -99 )
+scale_amount = 2.0
+color_ramp = SubResource( 2 )
+
+[node name="two" type="Sprite" parent="Center/main_nav_panel/VBoxContainer"]
+self_modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 272, 217.66 )
+texture = ExtResource( 3 )
+
+[node name="Gameplay" type="TextureButton" parent="Center/main_nav_panel/VBoxContainer/two"]
+margin_left = -270.0
+margin_top = -72.0
+margin_right = 270.0
+margin_bottom = 74.0
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Label" type="Label" parent="Center/main_nav_panel/VBoxContainer/two/Gameplay"]
+margin_right = 540.0
+margin_bottom = 146.0
+custom_fonts/font = SubResource( 1 )
+text = "Game Play"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="three" type="Sprite" parent="Center/main_nav_panel/VBoxContainer"]
+self_modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 272, 364.678 )
+texture = ExtResource( 3 )
+
+[node name="Development" type="TextureButton" parent="Center/main_nav_panel/VBoxContainer/three"]
+margin_left = -270.0
+margin_top = -72.0
+margin_right = 270.0
+margin_bottom = 74.0
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Label" type="Label" parent="Center/main_nav_panel/VBoxContainer/three/Development"]
+margin_right = 540.0
+margin_bottom = 146.0
+custom_fonts/font = SubResource( 1 )
+text = "Development"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="four" type="Sprite" parent="Center/main_nav_panel/VBoxContainer"]
+self_modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 272, 511.072 )
+texture = ExtResource( 3 )
+
+[node name="Extras" type="TextureButton" parent="Center/main_nav_panel/VBoxContainer/four"]
+margin_left = -270.0
+margin_top = -72.0
+margin_right = 270.0
+margin_bottom = 74.0
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Label" type="Label" parent="Center/main_nav_panel/VBoxContainer/four/Extras"]
+margin_right = 540.0
+margin_bottom = 146.0
+custom_fonts/font = SubResource( 1 )
+text = "Extras"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterTop" type="CenterContainer" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -270.0
+margin_top = 15.0
+margin_right = 270.0
+margin_bottom = 75.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="GameTitle" type="Label" parent="CenterTop"]
+margin_left = 70.0
+margin_right = 470.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 400, 60 )
+custom_fonts/font = SubResource( 3 )
+text = "Platformer Game Starter Kit"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CenterBottom" type="CenterContainer" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -540.0
+margin_top = -300.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterBottom"]
+margin_top = 71.0
+margin_right = 540.0
+margin_bottom = 228.0
+grow_horizontal = 2
+rect_min_size = Vector2( 540, 0 )
+custom_constants/separation = 10
+alignment = 1
+
+[node name="Label" type="Label" parent="CenterBottom/VBoxContainer"]
+margin_right = 540.0
+margin_bottom = 22.0
+custom_fonts/font = SubResource( 4 )
+align = 1
+
+[node name="B_Play" type="Button" parent="CenterBottom/VBoxContainer"]
+margin_top = 32.0
+margin_right = 540.0
+margin_bottom = 67.0
+rect_min_size = Vector2( 130, 35 )
+theme = ExtResource( 8 )
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+action_mode = 0
+text = "GO"
+
+[node name="B_Settings" type="Button" parent="CenterBottom/VBoxContainer"]
+margin_top = 77.0
+margin_right = 540.0
+margin_bottom = 112.0
+rect_min_size = Vector2( 130, 35 )
+theme = ExtResource( 8 )
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+action_mode = 0
+text = "Settings"
+
+[node name="B_Exit" type="Button" parent="CenterBottom/VBoxContainer"]
+margin_top = 122.0
+margin_right = 540.0
+margin_bottom = 157.0
+rect_min_size = Vector2( 130, 35 )
+theme = ExtResource( 8 )
+custom_fonts/font = SubResource( 7 )
+action_mode = 0
+text = "Exit"
+
+[node name="BGControl" type="Control" parent="."]
+modulate = Color( 0.454902, 0.454902, 0.454902, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -540.0
+margin_bottom = -960.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="background" type="Sprite" parent="BGControl"]
+light_mask = 0
+z_index = -1
+z_as_relative = false
+texture = ExtResource( 5 )
+centered = false
+region_rect = Rect2( 0, 0, 1280, 720 )
+
+[node name="config" parent="." instance=ExtResource( 9 )]
+page_title = "Mudhead Mesa"
+[connection signal="mouse_entered" from="Center/main_nav_panel/VBoxContainer/one/About_The_Game" to="." method="_on_About_The_Game_mouse_entered"]
+[connection signal="mouse_exited" from="Center/main_nav_panel/VBoxContainer/one/About_The_Game" to="." method="_on_About_The_Game_mouse_exited"]

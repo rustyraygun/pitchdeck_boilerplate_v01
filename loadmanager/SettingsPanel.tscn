@@ -1,0 +1,218 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://loadmanager/SettingsPanel.gd" type="Script" id=1]
+[ext_resource path="D:/godotprojectsDELL/GODOT_3_2/godot_mobile_pwa_boilerplater/fonts/antonio/Antonio-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://fonts/Bebas-Regular.otf" type="DynamicFontData" id=3]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.521569, 0.321569, 0.662745, 1 )
+border_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.521569, 0.321569, 0.662745, 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 18
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=5]
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=6]
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=7]
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 12
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=9]
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=10]
+use_filter = true
+font_data = ExtResource( 2 )
+
+[node name="SettingsPanel" type="PanelContainer"]
+pause_mode = 2
+show_behind_parent = true
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -270.0
+margin_top = 75.0
+margin_right = 270.0
+margin_bottom = 395.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="panel" type="Panel" parent="."]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 533.0
+margin_bottom = 313.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="L_Res" type="Label" parent="panel"]
+anchor_left = 0.0831815
+anchor_right = 0.0831815
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 130.0
+margin_bottom = 46.0
+custom_styles/normal = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Resolution:"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="L_Fullscreen" type="Label" parent="panel"]
+anchor_left = 0.0831815
+anchor_right = 0.0831815
+margin_left = 10.0
+margin_top = 60.0
+margin_right = 130.0
+margin_bottom = 96.0
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Fullscreen"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="CheckBox" type="CheckBox" parent="panel/L_Fullscreen"]
+margin_left = 130.0
+margin_right = 166.0
+margin_bottom = 36.0
+rect_min_size = Vector2( 36, 36 )
+custom_fonts/font = SubResource( 5 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="L_Windowed" type="Label" parent="panel"]
+anchor_left = 0.0831815
+anchor_right = 0.0831815
+margin_left = 10.0
+margin_top = 110.0
+margin_right = 130.0
+margin_bottom = 146.0
+custom_styles/normal = SubResource( 1 )
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Windowed"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="CheckBox" type="CheckBox" parent="panel/L_Windowed"]
+margin_left = 130.0
+margin_right = 166.0
+margin_bottom = 36.0
+rect_min_size = Vector2( 36, 36 )
+custom_fonts/font = SubResource( 6 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="L_Vsync" type="Label" parent="panel"]
+anchor_left = 0.0831815
+anchor_right = 0.0831815
+margin_left = 10.0
+margin_top = 160.0
+margin_right = 130.0
+margin_bottom = 196.0
+custom_styles/normal = SubResource( 1 )
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "VSYNC"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="CheckBox" type="CheckBox" parent="panel/L_Vsync"]
+margin_left = 130.0
+margin_right = 166.0
+margin_bottom = 36.0
+rect_min_size = Vector2( 36, 36 )
+custom_fonts/font = SubResource( 7 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="OpzRes" type="OptionButton" parent="panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 207.869
+margin_top = 10.0
+margin_right = -198.132
+margin_bottom = -261.0
+custom_fonts/font = SubResource( 8 )
+text = "Default"
+align = 1
+items = [ "Default", null, false, 0, null, "High-rez", null, false, 1, null, "Mid-rez", null, false, 2, null, "Low-rez", null, false, 3, null ]
+selected = 0
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="B_Apply" type="Button" parent="panel"]
+anchor_left = -0.24005
+anchor_top = -0.294118
+anchor_right = -0.24005
+anchor_bottom = -0.294118
+margin_left = 495.0
+margin_top = 250.0
+margin_right = 615.0
+margin_bottom = 290.0
+custom_fonts/font = SubResource( 9 )
+action_mode = 0
+text = "Apply"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="B_Exit" type="Button" parent="panel"]
+anchor_left = -0.013
+anchor_top = -0.023
+anchor_right = -0.013
+anchor_bottom = -0.023
+margin_left = 460.188
+margin_top = 17.038
+margin_right = 496.188
+margin_bottom = 53.038
+custom_fonts/font = SubResource( 10 )
+text = "X"
+__meta__ = {
+"_edit_use_anchors_": true
+}

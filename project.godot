@@ -1,0 +1,50 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[  ]
+_global_script_class_icons={
+
+}
+
+[android]
+
+modules=true
+
+[application]
+
+config/name="pitchdeck_biolerplate_01"
+run/main_scene="res://app.tscn"
+boot_splash/image="res://assets/images/blu_head.png"
+boot_splash/fullsize=false
+config/icon="res://music_box/bkgrnd_images/0.0.png"
+
+[autoload]
+
+config="*res://loadmanager/config.gd"
+Loadmanager="*res://loadmanager/Loadmanager.gd"
+
+[display]
+
+window/size/width=540
+window/size/height=960
+window/dpi/allow_hidpi=true
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "textureRectUrl", "ui_design_tool" )
+
+[rendering]
+
+quality/driver/driver_name="GLES2"
+vram_compression/import_etc=true
+vram_compression/import_etc2=false
+environment/default_environment="res://default_env.tres"

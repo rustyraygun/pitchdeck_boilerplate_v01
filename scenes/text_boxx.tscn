@@ -1,0 +1,272 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="D:/godotprojectsDELL/GODOT_3_2/godot_mobile_pwa_boilerplater/fonts/antonio/Antonio-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://fonts/Bebas-Regular.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://scenes/text_boxx/text_boxx.gd" type="Script" id=3]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.129412, 0.129412, 0.129412, 1 )
+
+[sub_resource type="DynamicFont" id=2]
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=5]
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="DynamicFont" id=7]
+extra_spacing_bottom = 1
+font_data = ExtResource( 2 )
+
+[sub_resource type="Animation" id=8]
+
+[sub_resource type="Animation" id=9]
+length = 6.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_fonts/normal_font:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2, 3, 4, 5, 6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 16, 20, 26, 35, 48, 43, 60 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:custom_fonts/normal_font:extra_spacing_bottom")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 1, 1 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:custom_fonts/normal_font:extra_spacing_top")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 19 ]
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "show_text"
+length = 2.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+
+[node name="text_boxx" type="Panel"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -540.0
+margin_bottom = 500.0
+rect_min_size = Vector2( 540, 500 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 493.527, 291.363 ],
+"_edit_use_anchors_": false
+}
+txt_content_1 = "Mudhead: Mesa is a 2D action-platformer, with environmental puzzles, big boss battles and RPG-lite elements. Players take control of BLU, a young member of the 'Mudhead' tribe that loves nature, Bo fighting and defeating the 'MechHeads' attempting to invade his planet.Mudhead: Mesa invites players to engage in action filled battles, challenging environmental puzzles, special ability stacking and story driven progression, set in a lush, stylistic, fully envisioned world. "
+txt_content_2 = "Genres: Action-Platformer, Puzzler, RPG-LiteRules/Paths: Fight bad guys & bosses, solve puzzles, collect items/abilitiesGoals: Disable the Mech Network by destroying MechNodes and defeating MechHead bosses on each level."
+sub_image_1 = "res://assets/images/banner_3.png"
+banner_sub_image_1 = "res://assets/images/banner_1.png"
+sub_image_2 = "res://assets/images/banner_2.png"
+banner_sub_image_2 = "res://assets/images/blu_head.png"
+sub_image_3 = "res://assets/images/banner_2.png"
+banner_sub_image_3 = "res://assets/images/banner_2.png"
+
+[node name="HSplitContainer" type="HSplitContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 7.52704
+margin_top = 6.52704
+margin_right = -3.47296
+margin_bottom = -6.47296
+custom_constants/autohide = 0
+custom_constants/separation = 15
+split_offset = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="HSplitContainer"]
+margin_right = 123.0
+margin_bottom = 487.0
+rect_min_size = Vector2( 120, 0 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HSplitContainer/Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="section_btn_1" type="Button" parent="HSplitContainer/Panel/VBoxContainer"]
+margin_right = 123.0
+margin_bottom = 30.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.0352941, 0.592157, 0.666667, 1 )
+text = "Foundation"
+flat = true
+align = 0
+
+[node name="section_btn_2" type="Button" parent="HSplitContainer/Panel/VBoxContainer"]
+margin_top = 34.0
+margin_right = 123.0
+margin_bottom = 64.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.0352941, 0.592157, 0.666667, 1 )
+text = "Genres"
+flat = true
+align = 0
+
+[node name="section_btn_3" type="Button" parent="HSplitContainer/Panel/VBoxContainer"]
+margin_top = 68.0
+margin_right = 123.0
+margin_bottom = 98.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.0352941, 0.592157, 0.666667, 1 )
+text = "Story"
+flat = true
+align = 0
+
+[node name="section_btn_4" type="Button" parent="HSplitContainer/Panel/VBoxContainer"]
+margin_top = 102.0
+margin_right = 123.0
+margin_bottom = 132.0
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0.0352941, 0.592157, 0.666667, 1 )
+text = "Characters"
+flat = true
+align = 0
+
+[node name="section_btn_5" type="Button" parent="HSplitContainer/Panel/VBoxContainer"]
+visible = false
+margin_top = 136.0
+margin_right = 123.0
+margin_bottom = 156.0
+text = "section0"
+flat = true
+align = 0
+
+[node name="section_btn_6" type="Button" parent="HSplitContainer/Panel/VBoxContainer"]
+visible = false
+margin_top = 136.0
+margin_right = 123.0
+margin_bottom = 156.0
+text = "section0"
+flat = true
+align = 0
+
+[node name="Button7" type="Button" parent="HSplitContainer/Panel/VBoxContainer"]
+visible = false
+margin_top = 136.0
+margin_right = 123.0
+margin_bottom = 156.0
+text = "section0"
+flat = true
+align = 0
+
+[node name="VSlider" type="VSlider" parent="HSplitContainer/Panel"]
+anchor_right = 0.106
+anchor_bottom = 0.296
+margin_left = 43.7602
+margin_top = 246.865
+margin_right = 59.7602
+margin_bottom = 262.865
+max_value = 6.0
+tick_count = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel2" type="Panel" parent="HSplitContainer"]
+margin_left = 138.0
+margin_right = 529.0
+margin_bottom = 487.0
+size_flags_horizontal = 3
+custom_styles/panel = SubResource( 6 )
+
+[node name="MarginContainer" type="MarginContainer" parent="HSplitContainer/Panel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 5
+custom_constants/margin_top = 5
+custom_constants/margin_left = 5
+custom_constants/margin_bottom = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HSplitContainer/Panel2/MarginContainer"]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 386.0
+margin_bottom = 482.0
+focus_mode = 2
+custom_fonts/normal_font = SubResource( 7 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+visible_characters = 0
+percent_visible = 0.0
+text = "Mudhead Mesa: Features Classic 2D Side-Scroller (mario, mega-man)  inspired level design."
+selection_enabled = true
+override_selected_font_color = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="HSplitContainer/Panel2/MarginContainer/RichTextLabel"]
+anims/idle = SubResource( 8 )
+anims/text_size = SubResource( 9 )
+
+[node name="set_text" type="AnimationPlayer" parent="HSplitContainer/Panel2/MarginContainer/RichTextLabel"]
+anims/show_text = SubResource( 10 )
+
+[node name="sub_image" type="TextureRect" parent="HSplitContainer/Panel2/MarginContainer"]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 386.0
+margin_bottom = 482.0
+rect_min_size = Vector2( 381, 180 )
+expand = true
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="HSplitContainer/Panel/VBoxContainer/section_btn_1" to="." method="_on_section_btn_1_pressed"]
+[connection signal="pressed" from="HSplitContainer/Panel/VBoxContainer/section_btn_2" to="." method="_on_section_btn_2_pressed"]
+[connection signal="pressed" from="HSplitContainer/Panel/VBoxContainer/section_btn_3" to="." method="_on_section_btn_3_pressed"]
+[connection signal="pressed" from="HSplitContainer/Panel/VBoxContainer/section_btn_4" to="." method="_on_section_btn_4_pressed"]
+[connection signal="pressed" from="HSplitContainer/Panel/VBoxContainer/section_btn_5" to="." method="_on_section_btn_5_pressed"]
+[connection signal="pressed" from="HSplitContainer/Panel/VBoxContainer/section_btn_6" to="." method="_on_section_btn_6_pressed"]
+[connection signal="value_changed" from="HSplitContainer/Panel/VSlider" to="." method="_on_VSlider_value_changed"]
